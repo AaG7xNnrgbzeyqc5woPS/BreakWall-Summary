@@ -13,6 +13,11 @@
  - [ AaG7xNnrgbzeyqc5woPS /all_install](https://github.com/AaG7xNnrgbzeyqc5woPS/all_install)
  - [ JeannieStudio /all_install ](https://github.com/JeannieStudio/all_install)
  - [ AaG7xNnrgbzeyqc5woPS /trojan-qt5 ](https://github.com/AaG7xNnrgbzeyqc5woPS/trojan-qt5)
+ - [ AaG7xNnrgbzeyqc5woPS /trojan-caddy-docker-compose ]( https://github.com/AaG7xNnrgbzeyqc5woPS/trojan-caddy-docker-compose )
+ - [ FaithPatrick /trojan-caddy-docker-compose ](https://github.com/FaithPatrick/trojan-caddy-docker-compose)
+ - [ 0758jian /docker-compose-trojan ](https://github.com/0758jian/docker-compose-trojan)
+ - [ AaG7xNnrgbzeyqc5woPS /docker-compose-trojan ](https://github.com/AaG7xNnrgbzeyqc5woPS/docker-compose-trojan)
+ - 
 
 
 # 1. See:
