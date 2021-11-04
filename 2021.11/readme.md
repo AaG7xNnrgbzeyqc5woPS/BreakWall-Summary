@@ -10,7 +10,8 @@
  - [AaG7xNnrgbzeyqc5woPS/Qv2ray](https://github.com/AaG7xNnrgbzeyqc5woPS/Qv2ray)
  - [ AaG7xNnrgbzeyqc5woPS /trojan-go ](https://github.com/AaG7xNnrgbzeyqc5woPS/trojan-go)
  - [ p4gefau1t /trojan-go](https://github.com/p4gefau1t/trojan-go)
- - 
+ - [ AaG7xNnrgbzeyqc5woPS /all_install](https://github.com/AaG7xNnrgbzeyqc5woPS/all_install)
+ - [ JeannieStudio /all_install ](https://github.com/JeannieStudio/all_install)
 
 
 # 1. See:
