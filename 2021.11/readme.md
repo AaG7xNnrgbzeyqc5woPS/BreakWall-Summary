@@ -12,6 +12,7 @@
  - [ p4gefau1t /trojan-go](https://github.com/p4gefau1t/trojan-go)
  - [ AaG7xNnrgbzeyqc5woPS /all_install](https://github.com/AaG7xNnrgbzeyqc5woPS/all_install)
  - [ JeannieStudio /all_install ](https://github.com/JeannieStudio/all_install)
+ - [ AaG7xNnrgbzeyqc5woPS /trojan-qt5 ](https://github.com/AaG7xNnrgbzeyqc5woPS/trojan-qt5)
 
 
 # 1. See:
