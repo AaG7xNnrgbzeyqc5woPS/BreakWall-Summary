@@ -8,6 +8,9 @@
  - [XRay_Trojan_Docker](https://github.com/maidoudouo/XRay_Trojan_Docker)  May 28, 2021
  - [Qv2ray /Qv2ray ](https://github.com/Qv2ray/Qv2ray)
  - [AaG7xNnrgbzeyqc5woPS/Qv2ray](https://github.com/AaG7xNnrgbzeyqc5woPS/Qv2ray)
+ - [ AaG7xNnrgbzeyqc5woPS /trojan-go ](https://github.com/AaG7xNnrgbzeyqc5woPS/trojan-go)
+ - [ p4gefau1t /trojan-go](https://github.com/p4gefau1t/trojan-go)
+ - 
 
 
 # 1. See:
