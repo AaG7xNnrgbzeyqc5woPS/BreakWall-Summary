@@ -9,7 +9,7 @@
  - [Qv2ray /Qv2ray ](https://github.com/Qv2ray/Qv2ray)
  - [AaG7xNnrgbzeyqc5woPS/Qv2ray](https://github.com/AaG7xNnrgbzeyqc5woPS/Qv2ray)
  - [ AaG7xNnrgbzeyqc5woPS /trojan-go ](https://github.com/AaG7xNnrgbzeyqc5woPS/trojan-go)
- - [ p4gefau1t /trojan-go](https://github.com/p4gefau1t/trojan-go)
+ - ❤️[ p4gefau1t /trojan-go](https://github.com/p4gefau1t/trojan-go)
  - [ AaG7xNnrgbzeyqc5woPS /all_install](https://github.com/AaG7xNnrgbzeyqc5woPS/all_install)
  - [ JeannieStudio /all_install ](https://github.com/JeannieStudio/all_install)
  - [ AaG7xNnrgbzeyqc5woPS /trojan-qt5 ](https://github.com/AaG7xNnrgbzeyqc5woPS/trojan-qt5)
@@ -29,4 +29,40 @@
   - [ AaG7xNnrgbzeyqc5woPS/acme.sh ](https://github.com/AaG7xNnrgbzeyqc5woPS/acme.sh)
   - [ acmesh-official/acme.sh ](https://github.com/acmesh-official/acme.sh)
   - 
+# 3. 2021.11.10开通
+   服务器端使用 ❤️[XRay_Trojan_Docker](https://github.com/maidoudouo/XRay_Trojan_Docker)
+   客户端使用   ❤️[ p4gefau1t /trojan-go](https://github.com/p4gefau1t/trojan-go)
+   
+##  服务器端安装和配置
+  1. 安装Docker,docker-compose, git, TCP-BBR
+  2. 下载源码：git clone https://github.com/maidoudouo/XRay_Trojan_Docker
+  3. 一键脚本设置：./OneKeySet.sh, 只需要输入域名，设置好配置后，输出配置信息并且写入info.txt文件
+  4. 构建并启动服务：docker-compose up -d
+  5. 伪站配置：只需要将网站放入caddy/www里面即可
 
+  
+## 客户端配置和启动命令
+  **客户端的配置信息参见服务器的 info.txt文件，关键是 域名和密码！**
+   ```
+   
+客户端 配置文件：
+$ cat config.yaml 
+run-type: client
+local-addr: 127.0.0.1
+local-port: 1080
+remote-addr: www.example.com
+remote-port: 443
+password:
+  - ***********
+
+   
+   # 客户端启动命令
+podman run \
+    --name trojan-go \
+    -d \
+    -v /home/John/.trojan-go:/etc/trojan-go \
+    --network host \
+    p4gefau1t/trojan-go \
+    /etc/trojan-go/config.yaml 
+    
+ ```
