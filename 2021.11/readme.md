@@ -30,8 +30,8 @@
   - [ acmesh-official/acme.sh ](https://github.com/acmesh-official/acme.sh)
   - 
 # 3. 2021.11.10开通
-   服务器端使用 ❤️[XRay_Trojan_Docker](https://github.com/maidoudouo/XRay_Trojan_Docker)
-   客户端使用   ❤️[ p4gefau1t /trojan-go](https://github.com/p4gefau1t/trojan-go)
+   - 服务器端使用 ❤️[XRay_Trojan_Docker](https://github.com/maidoudouo/XRay_Trojan_Docker)
+   - 客户端使用   ❤️[ p4gefau1t /trojan-go](https://github.com/p4gefau1t/trojan-go)
    
 ##  服务器端安装和配置
   1. 安装Docker,docker-compose, git, TCP-BBR
