@@ -36,13 +36,22 @@
 ##  服务器端安装和配置
   1. 安装Docker,docker-compose, git, TCP-BBR
   2. 下载源码：git clone https://github.com/maidoudouo/XRay_Trojan_Docker
-  3. 一键脚本设置：./OneKeySet.sh, 只需要输入域名，设置好配置后，输出配置信息并且写入info.txt文件
+  3. 一键脚本设置：./OneKeySet.sh, **只需要输入域名**，脚本设置好配置后，输出配置信息并且写入info.txt文件
   4. 构建并启动服务：docker-compose up -d
   5. 伪站配置：只需要将网站放入caddy/www里面即可
-
+  6. 调试： 
+     - docker-compose ps 能看到两个服务正常运行，up状态
+     - docker-compose logs 查看日志
+     - tree caddy 能看到申请到的证书，有3个文件，申请证书这个最容易出问题
+     - 如果申请证书失败，换个域名，并且等域名配置生效，能ping 通再次配置
+     - 再次配置的时候，要 docker-compose down 停止和删除容器，
+     - 并且 使用 rm -rf XRay_Trojan_Docker
+     - 最后 回到上面的第二步，下载源码，重新尝试 
   
 ## 客户端配置和启动命令
   **客户端的配置信息参见服务器的 info.txt文件，关键是 域名和密码！**
+  
+  
    ```
    
 客户端 配置文件：
