@@ -13,4 +13,5 @@
 - [teddysun/kms](https://hub.docker.com/r/teddysun/kms)
 - [kms/Dockerfile](https://github.com/teddysun/across/blob/master/docker/kms/Dockerfile)
 - [Wind4/vlmcsd - kms source code](https://github.com/Wind4/vlmcsd)
+- [Wind4/vlmcsd-docker & dockercompose](https://github.com/Wind4/vlmcsd-docker)
 
