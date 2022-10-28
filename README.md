@@ -9,9 +9,5 @@
 - [《网络代理与VPN应用详解》](https://hoochanlon.github.io/fq-book/#/)
 - [各种docker镜像](https://hub.docker.com/u/teddysun/)
 
-# KMS
-- [teddysun/kms](https://hub.docker.com/r/teddysun/kms)
-- [kms/Dockerfile](https://github.com/teddysun/across/blob/master/docker/kms/Dockerfile)
-- [Wind4/vlmcsd - kms source code](https://github.com/Wind4/vlmcsd)
-- [Wind4/vlmcsd-docker & dockercompose](https://github.com/Wind4/vlmcsd-docker)
-
+# 追踪
+-  [  XRay_Trojan_Naiveproxy_Docker ](https://github.com/maidoudouo/XRay_Trojan_Naiveproxy_Docker)
