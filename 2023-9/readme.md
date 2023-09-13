@@ -7,8 +7,13 @@
 # 服务器准备
 ## 1. install debain for vps
 ## 2. 检查服务器监听的端口
+```
   netstat -l
+  netstat -ln
+  netstat -aln 
+```
 ## 3. install ufw
+```
 apt update
 apt full-upgrade
 apt install ufw
@@ -16,10 +21,11 @@ ufw status
 ufw status verbose
 ufw allow ssh
 ufw enable
-
+```
 
 
 ## 2. bbr(上面的脚本已经自带bbr开通功能)
+```
 ow to check if BBR is enabled on your system?
 
 Before enabling BBR, checking if it's already enabled on your system is essential. To do this, run the following command:
@@ -34,6 +40,7 @@ If you see a different congestion control algorithm, such as cubic or reno, BBR 
 --------------------------------------------------------------------------------------------------
 See: 
   [How to check if BBR is enabled on your system?](https://www.linuxcapable.com/how-to-enable-bbr-on-debian-linux/)
+```
 
  ## 3. install singbox script
 ```
