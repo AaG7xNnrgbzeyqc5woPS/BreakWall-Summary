@@ -13,6 +13,7 @@
   netstat -aln 
 ```
 ## 3. install ufw
+- [ufw document](https://help.ubuntu.com/community/UFW)
 ```
 apt update
 apt full-upgrade
