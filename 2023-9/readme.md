@@ -6,6 +6,17 @@
 
 # 服务器准备
 ## 1. install debain for vps
+## 2. 检查服务器监听的端口
+  netstat -l
+## 3. install ufw
+apt update
+apt full-upgrade
+apt install ufw
+ufw status
+ufw status verbose
+ufw allow ssh
+ufw enable
+
 
 
 ## 2. bbr(上面的脚本已经自带bbr开通功能)
