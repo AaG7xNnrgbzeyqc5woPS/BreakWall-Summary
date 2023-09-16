@@ -37,6 +37,7 @@ bash -c "$(curl -L https://sing-box.vercel.app)" @ remove
 ```
 
 ***项目***
+
 |------------|---------------------------------------|
 |程序 	       | /usr/local/bin/sing-box               |
 |配置 	       | /usr/local/etc/sing-box/config.json   |
@@ -46,7 +47,7 @@ bash -c "$(curl -L https://sing-box.vercel.app)" @ remove
 |状态 	       | systemctl status sing-box             |
 |查看日志 	   | journalctl -u sing-box -o cat -e      |
 |实时日志 	   | journalctl -u sing-box -o cat -f      |
-
+|------------|---------------------------------------|
 
 
 # 4. 服务器端
