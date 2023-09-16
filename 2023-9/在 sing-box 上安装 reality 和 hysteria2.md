@@ -9,19 +9,19 @@ bash <(curl -fsSL https://github.com/vveg26/sing-box-reality-hysteria2/raw/main/
 ```
 
 # 2. 安装
-### 安装正式版
+**安装正式版**
 ```
 bash -c "$(curl -L https://sing-box.vercel.app)" @ install
 ```
-### 安装预发布版
+**安装预发布版**
 ```
 bash -c "$(curl -L https://sing-box.vercel.app)" @ install --beta
 ```
-### 卸载
+**卸载**
 ```
 bash -c "$(curl -L https://sing-box.vercel.app)" @ remove
 ```
-### 项目
+***项目***
 ```
 程序 	/usr/local/bin/sing-box
 配置 	/usr/local/etc/sing-box/config.json
