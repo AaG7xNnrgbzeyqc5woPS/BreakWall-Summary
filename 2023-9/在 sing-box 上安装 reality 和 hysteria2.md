@@ -35,9 +35,7 @@ bash -c "$(curl -L https://sing-box.vercel.app)" @ install --beta
 ```
 bash -c "$(curl -L https://sing-box.vercel.app)" @ remove
 ```
-
-***项目***
-
+| 项目        |                                       |
 |------------|---------------------------------------|
 |程序 	       | /usr/local/bin/sing-box               |
 |配置 	       | /usr/local/etc/sing-box/config.json   |
