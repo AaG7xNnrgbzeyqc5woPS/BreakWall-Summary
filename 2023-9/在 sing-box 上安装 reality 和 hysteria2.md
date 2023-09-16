@@ -10,10 +10,8 @@ bash <(curl -fsSL https://github.com/vveg26/sing-box-reality-hysteria2/raw/main/
 
 # 2. 安装
 - 注释1：我的理解，安装服务器和客户机都是一样的流程，区别只在于配置文件
-- 注释2：客户机不好连接外网，可以拷贝服务器上的程序 /usr/local/bin/sing-box
--       顺便拷贝两个文件： /etc/systemd/system/sing-box.service, /usr/local/etc/sing-box/config.json
--
-- 
+- 注释2：客户机不好连接外网，可以拷贝服务器上的程序 /usr/local/bin/sing-box， 顺便拷贝两个文件： /etc/systemd/system/sing-box.service, /usr/local/etc/sing-box/config.json
+
 **安装正式版**
 ```
 bash -c "$(curl -L https://sing-box.vercel.app)" @ install
