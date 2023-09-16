@@ -117,6 +117,194 @@ nano /usr/local/etc/sing-box/config.json
 
 ```
 
+# 5. 客户端
+sing-box 客户端配置文件
+```
+{
+  "dns": {
+    "rules": [
+      {
+        "clash_mode": "global",
+        "server": "remote"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "local"
+      },
+      {
+        "outbound": [
+          "any"
+        ],
+        "server": "local"
+      },
+      {
+        "geosite": "cn",
+        "server": "local"
+      }
+    ],
+    "servers": [
+      {
+        "address": "https://doh.pub/dns-query",
+        "detour": "select",
+        "tag": "remote"
+      },
+      {
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct",
+        "tag": "local"
+      }
+    ],
+    "strategy": "ipv4_only"
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "secret": "",
+      "store_selected": true
+    }
+  },
+  "inbounds": [
+    {
+      "auto_route": true,
+      "domain_strategy": "ipv4_only",
+      "endpoint_independent_nat": true,
+      "inet4_address": "172.19.0.1/30",
+      "mtu": 9000,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "strict_route": true,
+      "type": "tun"
+    },
+    {
+      "domain_strategy": "ipv4_only",
+      "listen": "127.0.0.1",
+      "listen_port": 2333,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "tag": "socks-in",
+      "type": "socks",
+      "users": []
+    },
+    {
+      "domain_strategy": "ipv4_only",
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "tag": "mixed-in",
+      "type": "mixed",
+      "users": []
+    }
+  ],
+  "log": {},
+  "outbounds": [
+    {
+      "tag": "select",
+      "type": "selector",
+      "default": "urltest",
+      "outbounds": [
+        "urltest",
+        "reality",
+        "hysteria2"
+      ]
+    },
+    {
+      "server": "", //服务器ip地址
+      "server_port": 443, //vless端口
+      "tag": "reality",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.lovelive-anime.jp", //偷取的网站
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "", //publickey
+          "short_id": "b2c86d5449d237fa"
+        }
+      },
+      "type": "vless",
+      "uuid": "", //uuid
+      "flow": "xtls-rprx-vision",
+      "packet_encoding": "xudp"
+    },
+    {
+            "type": "hysteria2",
+            "server": "", //ip地址
+            "server_port": 8443, //端口号
+            "up_mbps": 30,
+            "down_mbps": 150,
+            "insecure": true,
+            "password": "", //password
+            "tls": {
+                "enabled": true,
+                "server_name": "bing.com", //自签证书域名
+                "alpn": [
+                    "h3"
+                ]
+            }
+        }
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "block",
+      "type": "block"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    },
+    {
+      "tag": "urltest",
+      "type": "urltest",
+      "outbounds": [
+        "reality",
+        "hysteria2"
+      ]
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true,
+    "rules": [
+      {
+        "geosite": "category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "outbound": "dns-out",
+        "protocol": "dns"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "geoip": [
+          "cn",
+          "private"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": "geolocation-!cn",
+        "outbound": "select"
+      },
+      {
+        "geosite": "cn",
+        "outbound": "direct"
+      }
+    ]
+  }
+}
 
+```
 
 
