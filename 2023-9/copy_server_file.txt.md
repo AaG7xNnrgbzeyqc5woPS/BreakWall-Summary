@@ -1,3 +1,5 @@
+
+```
 ● sing-box.service - sing-box service
      Loaded: loaded (/etc/systemd/system/sing-box.service; enabled; preset: enabled)
      Active: active (running) since Fri 2023-09-15 03:03:38 UTC; 7h ago
@@ -35,9 +37,15 @@ sb_restore.sh
 2. cp sb_server_file_3/sing-box          /usr/local/bin/.
 3. cp sb_server_file_3/config.json       /usr/local/etc/sing-box/.
 
+
+
 uninstall_client.sh
 systemctl stop sing-box.service
 systemctl disable sing-box.service
 rm -f  /etc/systemd/system/sing-box.service
 rm -f  /usr/local/bin/sing-box
 rm -rf /usr/local/etc/sing-box/
+
+
+
+```
