@@ -22,15 +22,18 @@ Sep 15 09:11:38 localhost sing-box[7401]: DEBUG[22080] [2084407631 0ms] dns: loo
 Sep 15 09:11:38 localhost sing-box[7401]: DEBUG[22080] [2084407631 45ms] dns: lookup succeed for www.lovelive-anime.jp: 3.163.180.40 3.163.180.108 3.163.180.11 3.163.180.8
 Sep 15 09:11:38 localhost sing-box[7401]: ERROR[22080] [2084407631 191ms] inbound/vless[1]: process connection from 185.224.128.197:53512: REALITY: processed invalid connection
 
-backup at sing-box server
-sb_backup.sh
+#--------------------------------------------------------------------
+#!/usr/bin/env bash
+# backup at sing-box server
+# sb_backup.sh
 0. mkdir sb_server_file_3
 1. cp /etc/systemd/system/sing-box.service sb_server_file_3/.
 2. cp /usr/local/bin/sing-box  sb_server_file_3/.
 3. cp /usr/local/etc/sing-box/config.json sb_server_file_3/.
 
-restore at sing-box client
-sb_restore.sh
+#!/usr/bin/env bash
+# restore at sing-box client
+# sb_restore.sh
 0. echo start restore
 0. mkdir -p /usr/local/etc/sing-box/
 1. cp sb_server_file_3/sing-box.service  /etc/systemd/system/.
@@ -39,8 +42,8 @@ sb_restore.sh
 4. mkdir -p /usr/local/share/sing-box/
 
 
-
-uninstall_client.sh
+#!/usr/bin/env bash
+# uninstall_client.sh
 systemctl stop sing-box.service
 systemctl disable sing-box.service
 rm -f  /etc/systemd/system/sing-box.service
