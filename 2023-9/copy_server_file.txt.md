@@ -23,6 +23,7 @@ Sep 15 09:11:38 localhost sing-box[7401]: DEBUG[22080] [2084407631 45ms] dns: lo
 Sep 15 09:11:38 localhost sing-box[7401]: ERROR[22080] [2084407631 191ms] inbound/vless[1]: process connection from 185.224.128.197:53512: REALITY: processed invalid connection
 
 #--------------------------------------------------------------------
+
 #!/usr/bin/env bash
 # backup at sing-box server
 # sb_backup.sh
@@ -30,6 +31,8 @@ Sep 15 09:11:38 localhost sing-box[7401]: ERROR[22080] [2084407631 191ms] inboun
 1. cp /etc/systemd/system/sing-box.service sb_server_file_3/.
 2. cp /usr/local/bin/sing-box  sb_server_file_3/.
 3. cp /usr/local/etc/sing-box/config.json sb_server_file_3/.
+
+#--------------------------------------------------------
 
 #!/usr/bin/env bash
 # restore at sing-box client
@@ -41,6 +44,7 @@ Sep 15 09:11:38 localhost sing-box[7401]: ERROR[22080] [2084407631 191ms] inboun
 3. cp sb_server_file_3/config.json       /usr/local/etc/sing-box/.
 4. mkdir -p /usr/local/share/sing-box/
 
+#----------------------------------------------
 
 #!/usr/bin/env bash
 # uninstall_client.sh
