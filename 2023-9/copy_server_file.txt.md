@@ -36,6 +36,7 @@ sb_restore.sh
 1. cp sb_server_file_3/sing-box.service  /etc/systemd/system/.
 2. cp sb_server_file_3/sing-box          /usr/local/bin/.
 3. cp sb_server_file_3/config.json       /usr/local/etc/sing-box/.
+4. mkdir -p /usr/local/share/sing-box/
 
 
 
@@ -45,6 +46,7 @@ systemctl disable sing-box.service
 rm -f  /etc/systemd/system/sing-box.service
 rm -f  /usr/local/bin/sing-box
 rm -rf /usr/local/etc/sing-box/
+rm -rf /usr/local/share/sing-box/
 
 
 
