@@ -144,7 +144,7 @@ sing-box 客户端配置文件
     ],
     "servers": [
       {
-        "address": "https://doh.pub/dns-query",
+        "address": "https://1.1.1.1/dns-query",
         "detour": "select",
         "tag": "remote"
       },
@@ -196,7 +196,11 @@ sing-box 客户端配置文件
       "users": []
     }
   ],
-  "log": {},
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": true
+  },
   "outbounds": [
     {
       "tag": "select",
@@ -204,48 +208,49 @@ sing-box 客户端配置文件
       "default": "urltest",
       "outbounds": [
         "urltest",
-        "reality",
-        "hysteria2"
+        "sing-box-reality",
+        "sing-box-hysteria2"
       ]
     },
     {
-      "server": "", //服务器ip地址
-      "server_port": 443, //vless端口
-      "tag": "reality",
+      "type": "vless",
+      "tag": "sing-box-reality",
+      "uuid": "0000-0000-0000-0000-0000", //你的uuid
+      "flow": "xtls-rprx-vision",
+      "packet_encoding": "xudp",
+      "server": "13.115.159.101", //你的ip地址
+      "server_port": 443, //reality端口号
       "tls": {
         "enabled": true,
-        "server_name": "www.lovelive-anime.jp", //偷取的网站
+        "server_name": "www.lovelive-anime.jp", //修改为你的偷取的网站
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "", //publickey
-          "short_id": "b2c86d5449d237fa"
+          "public_key": "BPsRHmIOWpRsRpCKbal9Q2zWjHOrBd7_6SoEyXYu0yQ", //修改为你的public-key
+          "short_id": "b2c86d5449d237fa"   //修改为你的shortid
         }
-      },
-      "type": "vless",
-      "uuid": "", //uuid
-      "flow": "xtls-rprx-vision",
-      "packet_encoding": "xudp"
+      }
     },
     {
-            "type": "hysteria2",
-            "server": "", //ip地址
-            "server_port": 8443, //端口号
-            "up_mbps": 30,
-            "down_mbps": 150,
-            "insecure": true,
-            "password": "", //password
-            "tls": {
-                "enabled": true,
-                "server_name": "bing.com", //自签证书域名
-                "alpn": [
-                    "h3"
-                ]
-            }
-        }
+      "type": "hysteria2",
+      "server": "13.115.159.101", //你的vps ip地址
+      "server_port": 8443,   //hy2端口号
+      "tag": "sing-box-hysteria2",
+      "up_mbps": 30,
+      "down_mbps": 150,  //拥塞控制，根据自己的带宽填也可以跟我一样
+      "password": "mianyang", //你的hysteria2密码
+      "tls": {
+        "enabled": true,
+        "server_name": "bing.com", //自签域名
+        "insecure": true, //自签就true，不自签false，跳过证书验证
+        "alpn": [
+          "h3"
+        ]
+      }
+    },
     {
       "tag": "direct",
       "type": "direct"
@@ -262,8 +267,8 @@ sing-box 客户端配置文件
       "tag": "urltest",
       "type": "urltest",
       "outbounds": [
-        "reality",
-        "hysteria2"
+        "sing-box-reality",
+        "sing-box-hysteria2"
       ]
     }
   ],
